@@ -45,7 +45,7 @@ const Index = ({ data, title, description }: IndexProps) => {
               <p>{blog.description}</p>
             </li>
           ))}
-        </ul>
+        </ul> 
       </div>
     </>
   );
