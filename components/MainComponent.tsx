@@ -8,7 +8,6 @@ interface MainLayoutProps {
 
 function MainLayout({ children }: MainLayoutProps){
     const history = useRouter()
-    console.log(history);
     
     const menuItems = [
         { link: '/', title: 'Présentation' },
@@ -18,7 +17,6 @@ function MainLayout({ children }: MainLayoutProps){
     ]
 
     const currentMenuItem = menuItems.findIndex(m => m.link === history.asPath)
-    console.log({currentMenuItem});
     
     // Default Blog item cause blog slugs are only differents pages
     // if(currentMenuItem === -1){

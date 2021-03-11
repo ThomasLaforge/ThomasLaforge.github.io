@@ -3,6 +3,7 @@ import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { NextPageContext } from "next";
+import Head from "next/head";
 
 const CodeBlock = ({ language, value }: { language: string, value: string}) => {
   return (
@@ -26,6 +27,9 @@ const Blog = ({ content, data }: BlogProps) => {
 
   return (
     <>
+      <Head>
+        <title>{'Thomas Laforge - ' + frontmatter.title}</title>
+      </Head>
       <h1>{frontmatter.title}</h1>
       <h3>{frontmatter.description}</h3>
       <div className="tags">
