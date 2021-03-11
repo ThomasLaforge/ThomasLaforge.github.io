@@ -11,9 +11,9 @@ function MainLayout({ children }: MainLayoutProps){
     
     const menuItems = [
         { link: '/', title: 'Présentation' },
-        { link: '/', title: 'Blog' },
-        { link: '/', title: 'CV' },
-        { link: '/', title: 'Contact' }
+        { link: '/blog', title: 'Blog' },
+        { link: '/cv', title: 'CV' },
+        { link: '/contact', title: 'Contact' }
     ]
 
     const currentMenuItem = menuItems.findIndex(m => m.link === history.asPath)
