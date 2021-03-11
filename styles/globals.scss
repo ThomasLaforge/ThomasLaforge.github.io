@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, Merriweather, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 22px;
+  background: #fff;
+  color: #555e69;
 }
 
 a {
@@ -11,6 +17,142 @@ a {
   text-decoration: none;
 }
 
-* {
+h2 {
+  color: #33383f;
+  font-size: 1em;
+  letter-spacing: .11111em;
+  margin-bottom: 1.66667rem;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+h2::after {
+  border-color: #10bcf9;
+  border-left: 30px solid #10bcf9;
+  box-shadow: inset 0 1px 0 0 #e9ebed;
+  display: block;
+  content: "";
+  height: 3px;
+  margin-top: 1rem;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  header,
+  .content {
+    padding-bottom: 3.33333em;
+    padding-top: 3.33333em;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+  
+  header {
+    $profile_separation_heigth: 30px;
+
+    width: 30vw;
+    height: 100vh;
+    background: #33383f;
+    color: #959ea9;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    
+    .profile {
+      display: flex;
+      flex-direction: column;
+
+      .logo {
+        max-width: 205px;
+        object-fit: cover;
+        border: 3px solid #10bcf9;
+        border-radius: 100%;    
+        box-shadow: 0 0 1px 11px rgb(16 188 249 / 20%);
+        margin-bottom: $profile_separation_heigth;
+      }
+
+      .name {
+        font-size: 1.33333rem;
+        font-weight: bold;
+        margin: 0.8rem;
+        line-height: 1.2;  
+        color: #fff;
+      }
+
+      .functions {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.6rem;
+
+        margin-bottom: $profile_separation_heigth;
+      }
+    }
+
+    nav {
+      text-transform: uppercase;
+      margin-bottom: $profile_separation_heigth;
+
+      .menu {
+        line-height: 1.5;
+        letter-spacing: .15em;
+        list-style: none;
+        list-style-type: none;
+        
+        li {
+          border-top: 1px solid #555e69;
+          padding: .5em 0;
+          display: list-item;
+          text-align: -webkit-match-parent;
+        }
+
+        li:last-child{
+          border-bottom: 1px solid #555e69;
+        }
+
+        .menu-item_selected {
+          color: #10bcf9;
+        }
+      }
+    }
+
+    .socials {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      .social-media-elt {
+        width: 50%;
+      }
+    }
+  }
+  
+  .content {
+    flex: 1;
+    animation-duration: .7s;
+    animation-fill-mode: both;
+    animation-name: fadeInContent;
+  }
+  
+  @keyframes fadeInContent {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
 }

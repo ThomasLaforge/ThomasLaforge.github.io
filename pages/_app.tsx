@@ -1,8 +1,12 @@
-// import App from "next/app";
+import '../styles/globals.scss'
+
 import type { AppProps /*, AppContext */ } from 'next/app'
+import MainLayout from '../components/MainComponent'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return <MainLayout>
+    <Component {...pageProps} />
+  </MainLayout>
 }
 
 // Only uncomment this method if you have blocking data requirements for
