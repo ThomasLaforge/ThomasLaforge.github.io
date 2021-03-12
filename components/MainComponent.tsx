@@ -1,7 +1,9 @@
 import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 import { ReactElement } from "react";
-
+// @ts-ignore
+import {ImGithub} from 'react-icons/im';
+import {GrLinkedin} from 'react-icons/gr';
 interface MainLayoutProps {
     children: ReactElement
 }
@@ -56,10 +58,14 @@ function MainLayout({ children }: MainLayoutProps){
             </nav>
             <div className="socials">
                 <div className="social-media-elt">
-                    <a href='https://github.com/ThomasLaforge/'>Github</a>
+                    <a href='https://github.com/ThomasLaforge/'>
+                        <ImGithub />
+                    </a>
                 </div>
                 <div className="social-media-elt">
-                    <a href='https://www.linkedin.com/in/thomas-laforge-b5936374/'>Linkedin</a>
+                    <a href='https://www.linkedin.com/in/thomas-laforge-b5936374/'>
+                        <GrLinkedin />
+                    </a>
                 </div>
             </div>
         </header>
