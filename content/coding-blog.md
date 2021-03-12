@@ -2,8 +2,8 @@
 slug: coding-blog
 title: Coding blog
 tags: [code, dev]
-description: Coding Post For Beautiful Code
-date: 30-September-2020
+description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, nulla beatae? Unde consequuntur provident voluptas? Quo odit quaerat accusantium dolor, sed recusandae porro quam, dicta, doloribus corporis sequi pariatur aspernatur.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, nulla beatae? Unde consequuntur provident voluptas? Quo odit quaerat accusantium dolor, sed recusandae porro quam, dicta, doloribus corporis sequi pariatur aspernatur.
+date: 10 / 02 / 2020
 
 ---
 

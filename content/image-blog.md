@@ -1,7 +1,7 @@
 ---
 slug: image-blog
 title: Image Blog
-description: See How Images Looks in our Blog
+description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, nulla beatae? Unde consequuntur provident voluptas? Quo odit 
 date: 30-September-2020
 ---
 
