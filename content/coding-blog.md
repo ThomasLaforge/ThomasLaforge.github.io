@@ -6,13 +6,8 @@ description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
 date: 10 / 02 / 2020
 
 ---
+Una margarita por favor
 
-# React Functional Component
-
-​```jsx
-import React from "react";
-
-const CoolComponent = () => <div>I'm a cool component!!</div>;
-
-export default CoolComponent;
-​```
+``` ts
+import {a} from 'b'
+```
