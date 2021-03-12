@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { NextPageContext } from "next";
 import Head from "next/head";
+import { ImCalendar } from "react-icons/im";
 
 const CodeBlock = ({ language, value }: { language: string, value: string}) => {
   return (
@@ -17,6 +18,7 @@ interface BlogProps {
   content: string,
   data: {
     title: string,
+    date: string,
     description: string,
     tags: string[]
   }
@@ -30,18 +32,30 @@ const Blog = ({ content, data }: BlogProps) => {
       <Head>
         <title>{'Thomas Laforge - ' + frontmatter.title}</title>
       </Head>
-      <h1>{frontmatter.title}</h1>
-      <h3>{frontmatter.description}</h3>
-      <div className="tags">
-        {frontmatter.tags && frontmatter.tags.map((t, i) => (
-          <div className="tag" key={i}>{t}</div>
-        ))}
+      <div className="blog-article">
+        <div className='blog-summary'>
+          <div className='blog-title'>{frontmatter.title}</div>
+          <div className="blog-meta">
+            <div className="blog-date">
+              <ImCalendar className='date-icon'/> 
+              <div className="date-value">{frontmatter.date}</div>
+            </div>
+            {frontmatter.tags && 
+              <div className="blog-tags">
+                {frontmatter.tags.map((t, k) => (
+                  <div className="blog-tag-elt" key={k}>{t}</div>
+                ))}
+              </div>
+            }
+          </div>
+        </div>
+        
+        <ReactMarkdown
+          escapeHtml={true}
+          source={content}
+          renderers={{ code: CodeBlock }}
+        />
       </div>
-      <ReactMarkdown
-        escapeHtml={true}
-        source={content}
-        renderers={{ code: CodeBlock }}
-      />
     </>
   );
 };
