@@ -1,3 +1,5 @@
+import '../styles/blog.scss'
+import '../styles/contact.scss'
 import '../styles/globals.scss'
 
 import type { AppProps /*, AppContext */ } from 'next/app'

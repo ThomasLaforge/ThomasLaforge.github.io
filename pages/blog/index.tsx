@@ -3,6 +3,7 @@ import Head from "next/head";
 import matter from "gray-matter";
 import Link from "next/link";
 import { GetStaticProps } from "next";
+import {ImCalendar} from 'react-icons/im'
 
 interface IndexProps {
   data: any,
@@ -13,7 +14,9 @@ interface IndexProps {
 interface BlogData {
   slug: string,
   title: string,
-  description: string
+  description: string,
+  date: string,
+  tags: string[]
 }
 
 interface BlogMatter {
@@ -21,7 +24,7 @@ interface BlogMatter {
 }
 
 const Index = ({ data, title, description }: IndexProps) => {
-  const RealData = data.map((blog: any) => matter(blog)) as BlogMatter[]
+  const RealData = data.map((blog: string) => matter(blog)) as BlogMatter[]
   const ListItems = RealData.map((listItem) => listItem.data);
 
   return (
@@ -32,20 +35,32 @@ const Index = ({ data, title, description }: IndexProps) => {
         <meta name="Description" content={description}></meta>
         <title>{title}</title>
       </Head>
-      
-      <h1>Bienvenue sur le blog de Thomas Laforge</h1>
-      
-      <div>
-        <ul>
+      <div className="blog">
+        <h1>Bienvenue sur mon blog</h1>
+        
+        <div className='blog-collection'>
           {ListItems.map((blog, i) => (
-            <li key={i}>
+            <div className='blog-summary' key={i}>
               <Link href={`/blog/${blog.slug}`}>
-                <a>{blog.title}</a>
+                <a className='blog-title'>{blog.title}</a>
               </Link>
-              <p>{blog.description}</p>
-            </li>
+              <div className="blog-meta">
+                <div className="blog-date">
+                  <ImCalendar className='date-icon'/> 
+                  <div className="date-value">{blog.date}</div>
+                </div>
+                {blog.tags && 
+                  <div className="blog-tags">
+                    {blog.tags.map((t, k) => (
+                      <div className="blog-tag-elt" key={k}>{t}</div>
+                    ))}
+                  </div>
+                }
+              </div>
+              <div className='blog-description'>{blog.description}</div>
+            </div>
           ))}
-        </ul> 
+        </div>
       </div>
     </>
   );
