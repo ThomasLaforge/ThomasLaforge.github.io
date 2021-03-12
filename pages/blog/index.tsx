@@ -23,17 +23,14 @@ interface BlogMatter {
   data: BlogData
 }
 
-const Index = ({ data, title, description }: IndexProps) => {
+const Index = ({ data }: IndexProps) => {
   const RealData = data.map((blog: string) => matter(blog)) as BlogMatter[]
   const ListItems = RealData.map((listItem) => listItem.data);
 
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta charSet="utf-8" />
-        <meta name="Description" content={description}></meta>
-        <title>{title}</title>
+        <title>Thomas Laforge - Blog</title>
       </Head>
       <div className="blog">
         <h1>Bienvenue sur mon blog</h1>
