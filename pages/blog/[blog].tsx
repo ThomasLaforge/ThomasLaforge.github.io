@@ -5,6 +5,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { NextPageContext } from "next";
 import Head from "next/head";
 import { ImCalendar } from "react-icons/im";
+import DisqusComments from "../../components/DisqusComments";
 
 const CodeBlock = ({ language, value }: { language: string, value: string}) => {
   return (
@@ -20,7 +21,8 @@ interface BlogProps {
     title: string,
     date: string,
     description: string,
-    tags: string[]
+    tags: string[],
+    slug: string
   }
 }
 
@@ -56,6 +58,10 @@ const Blog = ({ content, data }: BlogProps) => {
           renderers={{ code: CodeBlock }}
         />
       </div>
+
+      <DisqusComments 
+        post={frontmatter}
+      />
     </>
   );
 };

@@ -8,14 +8,16 @@ interface DisqusCommentsProps {
 }
 
 const DisqusComments = ({ post }: DisqusCommentsProps) => {
-  const disqusShortname = "thomaslaforge"
+  const disqusShortname = "thomas-laforge-blog"
   const disqusConfig = {
-    url: `https://blog.thomas-laforge.fr/${post.slug}`,
+    url: process.env.NODE_ENV 
+      ? `http://localhost:3000/${post.slug}`
+      : `https://thomas-laforge.com/${post.slug}`,
     identifier: post.slug, // Single post id
     title: post.title // Single post title
   }
   return (
-    <div>
+    <div className="disqus-block">
       <DiscussionEmbed
         shortname={disqusShortname}
         config={disqusConfig}
