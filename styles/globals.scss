@@ -157,6 +157,11 @@ h2::after {
     animation-duration: .7s;
     animation-fill-mode: both;
     animation-name: fadeInContent;
+    
+    .inner {
+      max-width: 1080px;
+      margin-inline: auto;
+    }
   }
   
   @keyframes fadeInContent {

@@ -69,7 +69,11 @@ function MainLayout({ children }: MainLayoutProps){
                 </div>
             </div>
         </header>
-        <div className="content">{children}</div>
+        <div className="content">
+            <div className="inner">
+                {children}
+            </div>
+        </div>
     </div>
     );
 }
