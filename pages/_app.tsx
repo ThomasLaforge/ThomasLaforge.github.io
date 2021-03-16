@@ -1,4 +1,5 @@
 import '../styles/blog.scss'
+import '../styles/cv.scss'
 import '../styles/contact.scss'
 import '../styles/globals.scss'
 
