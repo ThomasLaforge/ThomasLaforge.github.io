@@ -1,22 +1,62 @@
-.formation {
-    display: flex;
-    flex-direction: column;
-    margin: 50px 0;
+@import 'colors';
 
-    .formation-title {
-        width: 100%;
-        text-align: left;
+.cv {
+    .cv-title {
+        text-align: center;
+        margin-bottom: 1vh;
+    }
+    .cv-function {
+        text-align: center;
+        margin-bottom: 4vh;
     }
 
-    .formation-info {
+    .cv-download {
+        margin-bottom: 4vh;
         display: flex;
-        flex-direction: row;
-        font-style: italic;
-        .formation-years {
-            width: 100px;
-        }
-        .formation-address {
+        justify-content: center;
 
+        .cv-download-btn {
+            background-color: $primary;
+            color: $white;
+            border: lighten($primary, 3%) 4px solid;
+            border-radius: 3px;
+            padding: 0.75rem 1.5rem;
+            font-size: 77%;
+        }
+        .cv-download-btn:active {
+            background-color: lighten($primary, 3%);
+            color: $white;
+            border: $primary 4px solid;
+        }
+    }
+    
+    .cv-presentation {
+        margin-bottom: 6vh;
+    }
+
+    .cv-formations {
+        .formation {
+            display: flex;
+            flex-direction: column;
+            margin: 50px 0;
+        
+            .formation-title {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 1vh;
+            }
+        
+            .formation-info {
+                display: flex;
+                flex-direction: row;
+                font-style: italic;
+                .formation-years {
+                    width: 7rem;
+                }
+                .formation-address {
+                    
+                }
+            }
         }
     }
 }
