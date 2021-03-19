@@ -44,9 +44,9 @@ const Index = ({ data, title, description }: IndexProps) => {
         <title>Thomas Laforge - Contactez moi</title>
       </Head>
       
-      <main id="main" className="site-main">
+      <main id="main" className="contact-page">
         <h2>Contact</h2>
-        <section id="contact-form" className="block-form">
+        <section className="block-form">
           <div className="block-content">
             <p>Pour me contacter, merci de remplir le formulaire.</p>
             <div className="screen-reader-text">
@@ -57,12 +57,12 @@ const Index = ({ data, title, description }: IndexProps) => {
             </div>
             <input type="hidden" name="form-name" value="contactForm" />
             <div className="form-group">
-              <label htmlFor="name">Nom</label>
+              <label htmlFor="name">Nom et Prénom</label>
               <input 
                 type="text" 
                 name="name" 
                 id="name" 
-                placeholder="Votre nom et prénom" 
+                placeholder="Etienne Bigoud" 
                 required 
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -74,7 +74,7 @@ const Index = ({ data, title, description }: IndexProps) => {
                 type="email" 
                 name="email" 
                 id="email" 
-                placeholder="Votre adresse mail" 
+                placeholder="e.bigoud@bleu.fr" 
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -86,7 +86,8 @@ const Index = ({ data, title, description }: IndexProps) => {
                 name="message" 
                 id="message" 
                 rows={7} 
-                placeholder="Votre message"
+                className="textarea-message"
+                placeholder="Je vous contacte pour ..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />

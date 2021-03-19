@@ -4,6 +4,7 @@ import { ReactElement } from "react";
 // @ts-ignore
 import {ImGithub} from 'react-icons/im';
 import {GrLinkedin} from 'react-icons/gr';
+import {SiGmail} from 'react-icons/si'
 interface MainLayoutProps {
     children: ReactElement
 }
@@ -65,6 +66,11 @@ function MainLayout({ children }: MainLayoutProps){
                 <div className="social-media-elt">
                     <a href='https://www.linkedin.com/in/thomas-laforge-b5936374/'>
                         <GrLinkedin />
+                    </a>
+                </div>
+                <div className="social-media-elt">
+                    <a href='mailto:thomas.laforge.38@gmail.com'>
+                        <SiGmail />
                     </a>
                 </div>
             </div>

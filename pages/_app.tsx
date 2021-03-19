@@ -2,6 +2,7 @@ import '../styles/blog.scss'
 import '../styles/cv.scss'
 import '../styles/contact.scss'
 import '../styles/globals.scss'
+import '../styles/presentation.scss'
 
 import type { AppProps /*, AppContext */ } from 'next/app'
 import MainLayout from '../components/MainComponent'

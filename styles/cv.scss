@@ -14,44 +14,100 @@
         margin-bottom: 4vh;
         display: flex;
         justify-content: center;
-
-        .cv-download-btn {
-            background-color: $primary;
-            color: $white;
-            border: lighten($primary, 3%) 4px solid;
-            border-radius: 3px;
-            padding: 0.75rem 1.5rem;
-            font-size: 77%;
-        }
-        .cv-download-btn:active {
-            background-color: lighten($primary, 3%);
-            color: $white;
-            border: $primary 4px solid;
-        }
     }
     
     .cv-presentation {
-        margin-bottom: 6vh;
+    }
+
+    .cv-professional-experiences {
+        display: flex;
+        flex-direction: column;
+
+        .professional-experiences-title {
+            font-weight: bold;
+        }
+        .professional-experiences-list {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            margin: 0;
+
+            .professional-xp {
+                display: flex;
+                flex-direction: column;
+                margin-block: 2vh;
+
+                .xp-complete-title {
+                    display: flex;
+                    flex-direction: row;
+                    font-weight: bold;
+
+                    .xp-type {}
+                    .xp-title-separator {
+                        width: 2rem;
+                        text-align: center;
+                    }
+                    .xp-title {}
+                }
+                .xp-subtitle {
+                    display: flex;
+                    flex-direction: row;
+                    font-style: italic;
+                    margin-bottom: 1.5vh;
+
+                    .xp-enterprise {
+                    }
+                    .xp-subtitle-separator {
+                        width: 2rem;
+                        text-align: center;
+                    }
+                    .xp-years {}
+                }
+                .xp-tasks {
+                    .task {
+                        margin-bottom: 1vh;
+                        .task-name {}
+                        .task-details {
+                            list-style-type: none;
+
+                            .task-detail:before {
+                                content: '- ';
+                            }
+                            .task-detail {
+                                font-size: 80%;
+                            }
+                        }
+                        .task-tools {
+                            font-style: italic;
+                            font-size: 80%;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .cv-formations {
         .formation {
             display: flex;
             flex-direction: column;
-            margin: 50px 0;
+            margin: 2vh 0;
         
             .formation-title {
                 width: 100%;
                 text-align: left;
-                margin-bottom: 1vh;
+                margin-bottom: 0.5vh;
+                font-size: 92%;
             }
         
             .formation-info {
                 display: flex;
                 flex-direction: row;
                 font-style: italic;
+                font-size: 90%;
+
                 .formation-years {
-                    width: 7rem;
+                    width: 6rem;
                 }
                 .formation-address {
                     

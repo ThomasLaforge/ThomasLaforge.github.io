@@ -1,12 +1,28 @@
-.screen-reader-text {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute !important;
-    width: 1px;
-}
+.contact-page {
+    .screen-reader-text {
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute !important;
+        width: 1px;
+    }
 
-.site-main {
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3vh;
+    }
+
+
+    .form-submit {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        .button {
+            
+        }
+    }
 }

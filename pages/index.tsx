@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import matter from "gray-matter";
+import Link from "next/link";
+import ExternalLink from "../components/ExternalLink";
 
 interface IndexProps {
   data: any,
@@ -9,6 +11,7 @@ interface IndexProps {
 }
 
 const Index = ({ data, title, description }: IndexProps) => {
+  const [searchRequestBlog, setSearchRequestBlog] = useState('')
   return (
     <>
       <Head>
@@ -19,7 +22,61 @@ const Index = ({ data, title, description }: IndexProps) => {
       </Head>
       
       <h1>Bienvenue sur le blog de Thomas Laforge</h1>
-      <div>Et oui ...</div>
+      
+      <div className="message">
+        <p className='who-am-i'>
+          Je suis développeur Web de profession<br/>
+          Je donne également des cours de squash<br/>
+          Et je suis quelqu'un de très curieux
+        </p>
+        <p>Vous trouverez donc sur ce site des informations sur mes activités professionnelles, 
+          mes nombreux projets personnels, ainsi que des articles sur un sujet technique particulier.
+        </p>
+      </div>
+
+      <div className="contact-section">
+        <h2>Me contacter</h2>
+        <div className="contact-message">
+          <p>Vous souhaitez :</p>
+          <ul>
+            <li>Me faire remonter un soucis ou une coquille</li>
+            <li>En savoir un peu plus sur moi</li>
+            <li>Me proposer un projet professionnel</li>
+            <li>Pouvoir échanger</li>
+          </ul>
+          <p>
+            Je vous laisse me contacter avec le formulaire de contact <ExternalLink href="/contact" />
+          </p>
+        </div>
+      </div>
+      <div className="cv-section">
+        <h2>Mon CV</h2>
+        <p>Si vous souhaitez plutôt en savoir plus au sujet de :</p>
+        <ul>
+          <li>Mon cursus scolaire</li>
+          <li>Mes compétences techniques</li>
+          <li>Mes expèriences professionnelles</li>
+        </ul>
+        <p>
+          Je vous laisse accèder à mon CV <ExternalLink href="/cv" />
+        </p>         
+      </div>
+      <div className="blog-presentation">
+        <h2>Mes dernier articles</h2>
+        <div className="blog-presentation-message">
+          <p>
+            Voici les derniers articles sortis sur le site. 
+            Si vous souhaitez en voir plus ou rechercher certains types
+            d'articles en particulier, il y a un formulaire sur 
+            la page d'accueil du blog <ExternalLink href="/blog" />
+          </p>
+        </div>
+        <div className="blog-lists">
+          <div className="blogs-latest">
+
+          </div>
+        </div>
+      </div>
     </>
   );
 };
