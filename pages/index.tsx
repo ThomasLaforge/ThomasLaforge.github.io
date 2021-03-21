@@ -44,9 +44,9 @@ const Index = ({ data, title, description }: IndexProps) => {
             <li>Me proposer un projet professionnel</li>
             <li>Pouvoir échanger</li>
           </ul>
-          <p>
+          <div>
             Je vous laisse me contacter avec le formulaire de contact <ExternalLink href="/contact" />
-          </p>
+          </div>
         </div>
       </div>
       <div className="cv-section">
@@ -57,19 +57,19 @@ const Index = ({ data, title, description }: IndexProps) => {
           <li>Mes compétences techniques</li>
           <li>Mes expèriences professionnelles</li>
         </ul>
-        <p>
+        <div>
           Je vous laisse accèder à mon CV <ExternalLink href="/cv" />
-        </p>         
+        </div>         
       </div>
       <div className="blog-presentation">
         <h2>Mes dernier articles</h2>
         <div className="blog-presentation-message">
-          <p>
+          <div>
             Voici les derniers articles sortis sur le site. 
             Si vous souhaitez en voir plus ou rechercher certains types
             d'articles en particulier, il y a un formulaire sur 
             la page d'accueil du blog <ExternalLink href="/blog" />
-          </p>
+          </div>
         </div>
         <div className="blog-lists">
           <div className="blogs-latest">
