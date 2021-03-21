@@ -62,7 +62,7 @@ const Index = ({ data, title, description }: IndexProps) => {
                 type="text" 
                 name="name" 
                 id="name" 
-                placeholder="Etienne Bigoud" 
+                placeholder="Bigoud Etienne" 
                 required 
                 value={name}
                 onChange={(e) => setName(e.target.value)}
