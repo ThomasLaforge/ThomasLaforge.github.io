@@ -6,6 +6,7 @@ import { NextPageContext } from "next";
 import Head from "next/head";
 import { ImCalendar } from "react-icons/im";
 import DisqusComments from "../../components/DisqusComments";
+import gfm from 'remark-gfm'
 
 const CodeBlock = ({ language, value }: { language: string, value: string}) => {
   return (
@@ -56,6 +57,7 @@ const Blog = ({ content, data }: BlogProps) => {
           escapeHtml={true}
           source={content}
           renderers={{ code: CodeBlock }}
+          plugins={[gfm]}
         />
       </div>
 
