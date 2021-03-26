@@ -13,9 +13,15 @@ body {
   color: $text_color;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline dotted;
 }
 a:hover {
   color: $primary;
@@ -84,10 +90,10 @@ h2::after {
   margin-top: 1rem;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+blockquote {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: lighten($text_color, 5%)
 }
 
 .external-link {

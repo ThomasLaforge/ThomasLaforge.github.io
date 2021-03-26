@@ -7,6 +7,16 @@ import Head from "next/head";
 import { ImCalendar } from "react-icons/im";
 import DisqusComments from "../../components/DisqusComments";
 import gfm from 'remark-gfm'
+import emoji from 'emoji-dictionary'
+import Link from "next/link";
+
+const emojiSupport = (text: any) => text.value.replace(/:\w+:/gi, (name: string) => emoji.getUnicode(name))
+
+const linkRenderer = ({ children, href }: {children: react.ReactElement, href: string}) => {
+  return <Link href={href}><a>{children}</a></Link>
+}
+
+const BlogImage = (props: any) => { return <img {...props} style={{maxWidth: '100%'}} /> }
 
 const CodeBlock = ({ language, value }: { language: string, value: string}) => {
   return (
@@ -56,7 +66,12 @@ const Blog = ({ content, data }: BlogProps) => {
         <ReactMarkdown
           escapeHtml={true}
           source={content}
-          renderers={{ code: CodeBlock }}
+          renderers={{ 
+            code: CodeBlock, 
+            text: emojiSupport,
+            link: linkRenderer,
+            image: BlogImage
+          }}
           plugins={[gfm]}
         />
       </div>
