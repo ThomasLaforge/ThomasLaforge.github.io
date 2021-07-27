@@ -59,12 +59,18 @@ function MainLayout({ children }: MainLayoutProps){
             </nav>
             <div className="socials">
                 <div className="social-media-elt">
-                    <a href='https://github.com/ThomasLaforge/'>
+                    <a 
+                        href='https://github.com/ThomasLaforge/' 
+                        target="_blank"
+                    >
                         <ImGithub />
                     </a>
                 </div>
                 <div className="social-media-elt">
-                    <a href='https://www.linkedin.com/in/thomas-laforge-b5936374/'>
+                    <a 
+                        href='https://www.linkedin.com/in/thomas-laforge-b5936374/' 
+                        target="_blank"
+                    >
                         <GrLinkedin />
                     </a>
                 </div>
