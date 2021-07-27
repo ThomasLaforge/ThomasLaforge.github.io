@@ -65,6 +65,10 @@
 .blog-article {
     margin-bottom: 5vh;
 
+    a {
+        text-decoration: underline;
+    }
+
     .blog-summary {
         width: 100%;
         display: flex;
