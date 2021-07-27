@@ -22,7 +22,24 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     const mailOption = {
       from: `${email}`,
       to: `${process.env.EMAIL}`,
-      subject: `New mail from ${email}`,
+      subject: `Hello ${name},
+        We receive too much email from you ^^
+        I'm glad you wish to contact and I can confirm I have your message !
+        Please be kind with the send button and let me a day maximum to contact you in return.
+
+        Have a nice day !
+
+        Thomas
+
+        Bonjour ${name},
+        J'ai reçu beaucoup de message de ta part ^^
+        Je suis honoré de ton envie de me contact et je peux confirmer que j'ai bien reçu le message !
+        Merci de bien vouloir rester calme avec le bouton d'envoie et si tu me laisses une demi journée, soit sûr que je répondrai à ta demande.
+
+        Bonne journée à toi !
+        
+        Thomas
+      `,
       text: `
       ${name} wrote:
       ${text}
