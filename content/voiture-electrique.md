@@ -6,8 +6,6 @@ description: En juin 2021, Nous avons recherché une voiture électrique. Nous a
 date: 27/07/2021
 ---
 
-# Quelle voiture électrique ?
-
 ## Le projet
 
 En juin 2021, Nous avons recherché une voiture électrique. Nous avions pour projet de déménager en montagne, autour de Grenoble.
@@ -155,4 +153,4 @@ Le seul modèle disponible était de couleur blanche avec le pack "plus". Le pac
 Bon, il n'aura pas fallu attendre longtemps et vous savez sûrement quel choix a été fait. Notre petite molette a vite été commandée.
 Oui notre Mii molette est vraiment le choix de raison, mais c'est aussi et surtout un gros coup de coeur. Le but initial était d'avoir une voiture qui correspond à notre besoin et finalement elle offre bien plus. 
 
-Passer à l'électrique, c'est vraiment une nouvelle façon de conduire. Mais ça, je vous le décrirai dans [cette article](./seat-mii).
+Passer à l'électrique, c'est vraiment une nouvelle façon de conduire. Mais ça, je vous le décrirai dans [cet article](./seat-mii).
