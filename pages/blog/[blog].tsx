@@ -64,7 +64,7 @@ const Blog = ({ content, data }: BlogProps) => {
         </div>
         
         <ReactMarkdown
-          escapeHtml={true}
+          escapeHtml={false}
           source={content}
           renderers={{ 
             code: CodeBlock, 
@@ -72,7 +72,7 @@ const Blog = ({ content, data }: BlogProps) => {
             link: linkRenderer,
             image: BlogImage
           }}
-          plugins={[gfm]}
+          plugins={[ gfm ]}
         />
       </div>
 
