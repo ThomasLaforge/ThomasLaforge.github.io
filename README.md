@@ -2,7 +2,7 @@
 # Blog de Thomas Laforge - Dev fullstack JS
 
 ## TODO
--[ ] https://stackoverflow.com/questions/63783836/next-js-and-nodemailer-sending-an-email-from-contact-form
+-[x] [Formulaire de contact](https://stackoverflow.com/questions/63783836/next-js-and-nodemailer-sending-an-email-from-contact-form)
 
 ## Development
 
