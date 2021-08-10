@@ -7,56 +7,75 @@
 
         .blog-summary {
             width: 100%;
-            display: flex;
-            flex-direction: column;
             margin-bottom: 3vh;
-                
-            .blog-title {
-                font-size: 1.3rem;
-                // color: #444;
-                font-weight: 600;
-                margin-bottom: 0.5vh;
-                // font-style: italic;
-            }
-            .blog-meta {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
+            display: flex;
+            flex-direction: row;
 
-                .blog-date {
-                    flex: 1;
+            .blog-miniature {
+                width: 150px;
+                > div {
+                    position: unset !important;
+                }
+                .miniature-image {
+                    object-fit: cover;
+                    width: 100% !important;
+                    position: relative !important;
+                    height: unset !important;
+                }
+            }
+
+            .blog-text-data {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                
+                .blog-title {
+                    font-size: 1.3rem;
+                    // color: #444;
+                    font-weight: 600;
+                    margin-bottom: 0.5vh;
+                    // font-style: italic;
+                }
+                .blog-meta {
                     display: flex;
                     flex-direction: row;
-                    align-content: center;
-
-                    width: 12rem;
-                    height: 1.8rem;
-                    line-height: 1.6rem;
-
-                    .date-icon {
-                        height: 90%;
-                        width: 0.8rem;
-                        margin-left: 0.2rem;
-                        margin-right: 0.4rem;
-                    }
-
-                    .date-value {
-                        font-size: 0.7rem;
-                    }
-                }
-                .blog-tags {
-                    display: flex;
-                    .blog-tag-elt {
+                    flex-wrap: wrap;
+    
+                    .blog-date {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: row;
                         align-content: center;
-                        padding: 0.2rem 1rem;
-                        background-color: #dbdbdb;
-                        border-radius: 0.1rem;
-                        margin: auto 0.3rem;
+    
+                        width: 12rem;
+                        height: 1.8rem;
+                        line-height: 1.6rem;
+    
+                        .date-icon {
+                            height: 90%;
+                            width: 0.8rem;
+                            margin-left: 0.2rem;
+                            margin-right: 0.4rem;
+                        }
+    
+                        .date-value {
+                            font-size: 0.7rem;
+                        }
+                    }
+                    .blog-tags {
+                        display: flex;
+                        .blog-tag-elt {
+                            align-content: center;
+                            padding: 0.2rem 1rem;
+                            background-color: #dbdbdb;
+                            border-radius: 0.1rem;
+                            margin: auto 0.3rem;
+                        }
                     }
                 }
-            }
-            .blog-description {
-                margin-top: 0.8vh;
+                .blog-description {
+                    margin-top: 0.8vh;
+                }
             }
         }
     }
