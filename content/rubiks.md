@@ -42,3 +42,16 @@ Voici les sommaire à jour :
     - [où acheter ses cubes ?](./magasins-cube.md)
     - [Les meilleurs 3 x 3](./achat-cube-3x3.md)
     - Big cubes
+
+## Liens Utiles
+http://www.sirwaffle.com/5x5-last-two-edge-algorithms.html
+https://www.youcandothecube.com/solve-it/4x4-solution
+https://www.worldcubeassociation.org/results/records?
+https://www.google.com/search?q=parity+4x4+oll&tbm=isch&ved=2ahUKEwiY-fCAqI_yAhUdAGMBHcrbB2YQ2-cCegQIABAA&oq=parity+4x4+oll&gs_lcp=CgNpbWcQAzIECAAQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeOgQIABATOgYIABAeEBM6CAgAEAUQHhATUMO_yQNY58TJA2D-xckDaABwAHgAgAFGiAH0AZIBATSYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=0E4GYZjRG52AjLsPyrefsAY&client=opera&hs=MGU#imgrc=1Bb9yEW2LCpBQM
+https://www.cubeskills.com/uploads/pdf/tutorials/pll-parity-cases.pdf
+https://sarah.cubing.net/3x3x3/pll.pdf
+https://sarah.cubing.net/3x3x3/oll.pdf
+https://jperm.net/4x4
+https://www.cubeskills.com/uploads/pdf/tutorials/pll-algorithms.pdf
+https://drive.google.com/file/d/1sq4w0eg5n73WGLnhiYVYe_QbTdhF-rSj/view
+https://jperm.net/algs/2lookoll 
