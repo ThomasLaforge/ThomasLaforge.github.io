@@ -4,7 +4,7 @@ $header_width: 25vw;
 
 .layout {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100%;
 
     header,
@@ -18,11 +18,6 @@ $header_width: 25vw;
     header {
         $profile_separation_heigth: 5vh;
 
-        left: 0;
-        position: fixed;
-
-        width: $header_width;
-        height: 100vh;
         background: #33383f;
         color: #959ea9;
         padding-left: 3vw;
@@ -91,21 +86,12 @@ $header_width: 25vw;
         }
 
         .socials {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            font-size: 1.5rem;
-            width: 100%;
-
-            .social-media-elt {
-                margin-inline: 1.5rem;
-            }
+            display: none;
         }
     }
 
     .content {
         flex: 1;
-        margin-left: $header_width;
         animation-duration: 0.7s;
         animation-fill-mode: both;
         animation-name: fadeInContent;
@@ -114,21 +100,6 @@ $header_width: 25vw;
             max-width: 1080px;
             margin-inline: auto;
         }
-    }
-
-    // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) {
-        flex-direction: column;
-    }
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) {
-        flex-direction: row;
-    }
-
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) {
-
     }
 
     @keyframes fadeInContent {
@@ -140,6 +111,39 @@ $header_width: 25vw;
         100% {
             opacity: 1;
             transform: translateY(0);
+        }
+    }
+
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 1200px) {
+    .layout {
+        flex-direction: row;
+
+        header {
+            height: 100vh;
+            width: $header_width;
+            left: 0;
+            position: fixed;
+            flex-direction: row;
+            
+            .socials {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                font-size: 1.5rem;
+                width: 100%;
+
+                .social-media-elt {
+                    margin-inline: 1.5rem;
+                }
+            }
+        }
+
+        .content {
+            margin-left: $header_width;
         }
     }
 }

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import matter from "gray-matter";
-import Link from "next/link";
 import ExternalLink from "../components/ExternalLink";
 
 interface IndexProps {
