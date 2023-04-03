@@ -28,3 +28,5 @@ Et en dehors du défi, j'avais aussi besoin de me retrouver seul sans travail, s
 ## Les étapes
 
 \[mis à jour selon les dispos de l'auteur et de sa connexion internet du jour\]
+
+- [Etape 1 - Saint-Priest vers Chalon-sur-Saône](./roadtrip-amsterdam-etape-1.md)
