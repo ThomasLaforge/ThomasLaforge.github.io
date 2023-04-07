@@ -52,8 +52,8 @@ const Index = ({ data }: IndexProps) => {
 
               <div className="blog-text-data">
 
-                <Link href={`/blog/${blog.slug}`}>
-                  <a className='blog-title'>{blog.title}</a>
+                <Link className='blog-title' href={`/blog/${blog.slug}`}>
+                  {blog.title}
                 </Link>
                 <div className="blog-meta">
                   <div className="blog-date">

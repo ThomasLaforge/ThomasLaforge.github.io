@@ -26,20 +26,18 @@ function MainLayout({ children }: MainLayoutProps){
     //     currentMenuItem = menuItems.findIndex(m => m.title === 'Blog')
     // }
 
-    return (<div className="layout">
+    return <div className="layout">
         <header>
             <div className="profile">
                 <Link href="/">
-                    <a>
-                        <img 
-                            className='logo' 
-                            src={'/avatar.png'} 
-                            alt="logo emprunté..."
-                        />
-                    </a>
+                    <img 
+                        className='logo' 
+                        src={'/avatar.png'} 
+                        alt="logo emprunté..."
+                    />
                 </Link>
-                <Link href="/">
-                    <a className="name">Thomas Laforge</a>
+                <Link href="/" className="name">
+                    Thomas Laforge
                 </Link>
                 <div className="functions">
                     <div className="function">Developpeur web freelance</div>
@@ -51,7 +49,7 @@ function MainLayout({ children }: MainLayoutProps){
                     {menuItems.map((item, key) => (
                         <li key={key} className={currentMenuItem === key ? 'menu-item_selected' : ''}>
                             <Link href={item.link}>
-                                <a>{item.title}</a>
+                                {item.title}    
                             </Link>
                         </li>
                     ))}
@@ -87,7 +85,6 @@ function MainLayout({ children }: MainLayoutProps){
             </div>
         </div>
     </div>
-    );
 }
 
 export default MainLayout;

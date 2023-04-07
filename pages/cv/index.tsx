@@ -9,7 +9,7 @@ interface IndexProps {
   description: string
 }
 
-interface Formation {
+interface Formation { 
   title: string,
   years: string,
   address: string 
