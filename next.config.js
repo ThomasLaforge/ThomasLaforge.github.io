@@ -7,5 +7,9 @@ module.exports = {
       use: "raw-loader",
     });
     return config;
-  }
+  },
+  sassOptions: {
+    fiber: false,
+    includePaths: [path.join(__dirname, 'styles')],
+  },
 };
