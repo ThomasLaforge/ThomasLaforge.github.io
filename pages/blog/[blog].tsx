@@ -40,6 +40,7 @@ interface BlogProps {
 
 const Blog = ({ content, data }: BlogProps) => {
   const frontmatter = data;
+  console.log("content", content)
 
   return (
     <>
@@ -65,7 +66,8 @@ const Blog = ({ content, data }: BlogProps) => {
         </div>
         
         <ReactMarkdown
-          escapeHtml={false}
+
+          skipHtml={false}
           source={content}
           renderers={{ 
             code: CodeBlock, 
@@ -74,7 +76,7 @@ const Blog = ({ content, data }: BlogProps) => {
             image: BlogImage
           }}
           plugins={[ gfm ]}
-        />
+        >{content}</ReactMarkdown>
       </div>
 
       <DisqusComments 

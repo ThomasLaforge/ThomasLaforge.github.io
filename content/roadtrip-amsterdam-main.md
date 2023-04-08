@@ -6,6 +6,8 @@ description: En avril 2023, j'ai décidé de réaliser un petit roadtrip en vél
 date: 03/04/2023
 ---
 
+# Mon road trip à Amsterdam
+
 En avril 2023, j'ai décidé de réaliser un petit roadtrip en vélo. Certains dirons bike packing et oui c'est exactement ça. J'ai réalisé un petit test à l'été 2022 en allant à Saint-Tropez depuis Grenoble en deux jours et j'avais adoré.
 
 ## Motivations
@@ -29,4 +31,4 @@ Et en dehors du défi, j'avais aussi besoin de me retrouver seul sans travail, s
 
 \[mis à jour selon les dispos de l'auteur et de sa connexion internet du jour\]
 
-- [Etape 1 - Saint-Priest vers Chalon-sur-Saône](./roadtrip-amsterdam-etape-1.md)
+- [Etape 1 - Saint-Priest vers Chalon-sur-Saône](./roadtrip-amsterdam-etape-1)
