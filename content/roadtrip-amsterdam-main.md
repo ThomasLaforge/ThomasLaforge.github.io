@@ -32,3 +32,7 @@ Et en dehors du défi, j'avais aussi besoin de me retrouver seul sans travail, s
 \[mis à jour selon les dispos de l'auteur et de sa connexion internet du jour\]
 
 - [Etape 1 - Saint-Priest vers Chalon-sur-Saône](./roadtrip-amsterdam-etape-1)
+- [Etape 2 - Chalon-sur-Saône vers Saint-Rémy](./roadtrip-amsterdam-etape-2)
+- [Etape 3 - Saint-Rémy vers Eaux Puisseaux](./roadtrip-amsterdam-etape-3)
+- [Etape 4 - Eaux Puisseaux vers Beton-Bazoches](./roadtrip-amsterdam-etape-4)
+- [Etape 5 - Beton-Bazoches vers Creil / Amiens](./roadtrip-amsterdam-etape-5)
