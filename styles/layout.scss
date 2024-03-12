@@ -1,6 +1,12 @@
 @import 'colors';
 
 $header_width: 25vw;
+$header_width-medium: 30vw;
+$profile_separation_heigth: 5vh;
+
+h1 {
+    text-align: center;
+}
 
 .layout {
     display: flex;
@@ -9,15 +15,10 @@ $header_width: 25vw;
 
     header,
     .content {
-        padding-bottom: 3.33333em;
-        padding-top: 3.33333em;
-        padding-left: 3vw;
-        padding-right: 3vw;
+        padding: 3.33333em 3vw;
     }
 
     header {
-        $profile_separation_heigth: 5vh;
-
         background: #33383f;
         color: #959ea9;
         padding-left: 3vw;
@@ -32,7 +33,7 @@ $header_width: 25vw;
             flex-direction: column;
 
             .logo {
-                max-width: 205px;
+                max-width: 97px;
                 object-fit: cover;
                 border: 3px solid $primary;
                 border-radius: 100%;
@@ -43,7 +44,7 @@ $header_width: 25vw;
             .name {
                 font-size: 1.33333rem;
                 font-weight: bold;
-                margin: 0.8rem;
+                margin: 0.8rem 0;
                 line-height: 1.2;
                 color: #fff;
             }
@@ -86,7 +87,13 @@ $header_width: 25vw;
         }
 
         .socials {
-            display: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            font-size: 1.5rem;
+
+            .social-media-elt {
+            }
         }
     }
 
@@ -118,26 +125,41 @@ $header_width: 25vw;
 
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
     .layout {
         flex-direction: row;
 
         header {
             height: 100vh;
-            width: $header_width;
+            width: $header_width-medium;
             left: 0;
             position: fixed;
-            flex-direction: row;
-            
-            .socials {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                font-size: 1.5rem;
-                width: 100%;
 
-                .social-media-elt {
-                    margin-inline: 1.5rem;
+            .profile {
+                .logo {
+                    max-width: 105px;
+                    margin-bottom: calc($profile_separation_heigth / 2);
+                }
+            }
+
+            .socials {
+                justify-content: space-between;
+            }
+        }
+
+        .content {
+            margin-left: $header_width-medium;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .layout {
+        header {
+            width: $header_width;
+            .profile {
+                .logo {
+                    max-width: 145px;
                 }
             }
         }

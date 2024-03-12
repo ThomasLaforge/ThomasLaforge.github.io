@@ -19,13 +19,13 @@ const Index = ({ data, title, description }: IndexProps) => {
         <title>{title}</title>
       </Head>
       
-      <h1>Bienvenue sur le blog de Thomas Laforge</h1>
+      <h1>Bienvenue sur le blog de<br/>Thomas Laforge</h1>
       
       <div className="message">
         <p className='who-am-i'>
-          Je suis développeur Web de profession<br/>
-          Je donne également des cours de squash<br/>
-          Et je suis quelqu'un de très curieux
+          Je suis développeur Web de profession.<br/>
+          Je donne également des cours de squash.<br/>
+          Et je suis quelqu'un de très curieux.
         </p>
         <p>Vous trouverez donc sur ce site des informations sur mes activités professionnelles, 
           mes nombreux projets personnels, ainsi que des articles sur un sujet technique particulier.
