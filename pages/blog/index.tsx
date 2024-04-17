@@ -26,6 +26,16 @@ interface BlogData {
 const Index = ({ data }: IndexProps) => {
   const { miniatures, content } = data
   const blogDatas = content.map( blog => matter(blog).data as BlogData )
+  
+  // sort by date formated as 'DD/MM/YYYY'
+  blogDatas.sort((a, b) => {
+    const [dayA, monthA, yearA] = a.date.split('/').map( n => parseInt(n))
+    const [dayB, monthB, yearB] = b.date.split('/').map( n => parseInt(n))
+    if (yearA !== yearB) return yearB - yearA
+    if (monthA !== monthB) return monthB - monthA
+    return dayB - dayA
+  })
+
   return (
     <>
       <Head>
@@ -89,6 +99,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const rawContent: string = fs.readFileSync(path, { encoding: "utf-8" });
     return rawContent
   });
+
+  
 
   return {
     props: { data : {

@@ -40,7 +40,6 @@ interface BlogProps {
 
 const Blog = ({ content, data }: BlogProps) => {
   const frontmatter = data;
-  console.log("content", content)
 
   return (
     <>
@@ -66,14 +65,14 @@ const Blog = ({ content, data }: BlogProps) => {
         </div>
         
         <ReactMarkdown
-
           skipHtml={false}
           source={content}
           renderers={{ 
             code: CodeBlock, 
             text: emojiSupport,
             link: linkRenderer,
-            image: BlogImage
+            image: BlogImage,
+            table: (props: any) => <table className='table'>{props.children}</table>,
           }}
           plugins={[ gfm ]}
         >{content}</ReactMarkdown>
