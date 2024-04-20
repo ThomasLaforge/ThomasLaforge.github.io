@@ -6,8 +6,6 @@ description: Oubli du mot de passe WSL ? Avant de tout réinstaller, voici comme
 date: 17/04/2024
 ---
 
-# Réinitialiser son mot de passe WSL
-
 ## Contexte
 
 Certains de mes étudiants n'ont pas toujours les bonnes pratiques pour leurs mots de passe. Certains au contraire cherchent à sécuriser au maximum leurs machines. Dans tous les cas, il arrive que l'on oublie son mot de passe WSL. 
@@ -58,7 +56,7 @@ wsl --list --verbose
 Ensuite, en fonction de votre distribution, vous allez taper une des commandes suivantes :
 
 | Distribution  | Commande à taper                        |
-| :------------ | :-------------------------------------- |
+| ------------- | --------------------------------------- |
 | Ubuntu        | `ubuntu config --default-user root`     |
 | Ubuntu 22.04  | `ubuntu2204 config --default-user root` |
 | Ubuntu 20.04  | `ubuntu2004 config --default-user root` |

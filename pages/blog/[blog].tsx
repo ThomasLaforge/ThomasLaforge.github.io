@@ -10,6 +10,7 @@ import DisqusComments from "../../components/DisqusComments";
 import gfm from 'remark-gfm'
 import emoji from 'emoji-dictionary'
 import Link from "next/link";
+import { nord } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const emojiSupport = (text: any) => text.value.replace(/:\w+:/gi, (name: string) => emoji.getUnicode(name))
 
@@ -19,11 +20,17 @@ const linkRenderer = ({ children, href }: {children: react.ReactElement, href: s
 
 const BlogImage = (props: any) => { return <img {...props} style={{maxWidth: '100%'}} /> }
 
-const CodeBlock = ({ language, value }: { language: string, value: string}) => {
-  return (
-    <SyntaxHighlighter language={language}>
-      {value}
+const CodeBlock = ({ node, inline, className, children, ...props }: any) => {
+  const match = /language-(\w+)/.exec(className || '');
+
+  return !inline && match ? (
+    <SyntaxHighlighter style={nord} PreTag="div" customStyle={{ fontSize: "14px"}} language={match[1]} {...props}>
+      {String(children).replace(/\n$/, '')}
     </SyntaxHighlighter>
+  ) : (
+    <code className={className} {...props}>
+      {children}
+    </code>
   );
 };
 
@@ -67,14 +74,13 @@ const Blog = ({ content, data }: BlogProps) => {
         <ReactMarkdown
           skipHtml={false}
           source={content}
-          renderers={{ 
-            code: CodeBlock, 
+          components={{ 
+            code: CodeBlock,
             text: emojiSupport,
             link: linkRenderer,
             image: BlogImage,
-            table: (props: any) => <table className='table'>{props.children}</table>,
           }}
-          plugins={[ gfm ]}
+          remarkPlugins={[ gfm ]}
         >{content}</ReactMarkdown>
       </div>
 
