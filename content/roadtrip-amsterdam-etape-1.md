@@ -1,6 +1,6 @@
 ---
 slug: roadtrip-amsterdam-etape-1
-title: Mon roadtrip à Amsterdam - première étape
+title: Mon roadtrip à Amsterdam - Jour 1
 tags: [bike-packing, voyage]
 description: Le départ s'est donc fait avec un peu de retard mais les corrections terminées et saisies à 2h30 du matin ont eu raison de moi et pourtant Camille m'avait bien aidé pour les corrections...
 date: 03/04/2023
