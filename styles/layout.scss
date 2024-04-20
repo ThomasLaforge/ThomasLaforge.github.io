@@ -29,6 +29,10 @@ h1 {
         flex-direction: column;
         justify-content: space-evenly;
 
+        .hide-action {
+            display: none;
+        }
+
         .profile {
             display: flex;
             flex-direction: column;
@@ -54,8 +58,10 @@ h1 {
                 display: flex;
                 flex-direction: column;
                 line-height: 1.6rem;
-
-                margin-bottom: $profile_separation_heigth;
+                
+                .function {
+                    margin-block: 0.2rem;
+                }
             }
         }
 
@@ -160,6 +166,40 @@ h1 {
 
         .content {
             margin-left: $header_width;
+        }
+    }
+}
+
+
+@media screen and (max-height: 520px){
+    .logo {
+        display: none;
+    }
+    
+    .layout {
+        header {
+            .hide-action {
+                display: block;
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+            }
+            padding: 0;
+        } 
+
+        .closed-header {
+            width: 3rem;
+            
+            .hide-action {
+                display: block;
+                position: absolute;
+                top: 2rem;
+                right: 1rem;
+            }
+        }
+
+        .big-content {
+            margin-left: 3rem;
         }
     }
 }

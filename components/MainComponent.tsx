@@ -1,15 +1,18 @@
 import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 // @ts-ignore
 import {ImGithub} from 'react-icons/im';
 import {GrLinkedin} from 'react-icons/gr';
 import {SiGmail} from 'react-icons/si'
+import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
+
 interface MainLayoutProps {
     children: ReactElement
 }
 
 function MainLayout({ children }: MainLayoutProps){
+    const [openedHeader, setOpenedHeader] = useState(true)
     const history = useRouter()
     
     const menuItems = [
@@ -27,59 +30,64 @@ function MainLayout({ children }: MainLayoutProps){
     // }
 
     return <div className="layout">
-        <header>
-            <div className="profile">
-                <Link href="/">
-                    <img 
-                        className='logo' 
-                        src={'/avatar.png'} 
-                        alt="logo emprunté..."
-                    />
-                </Link>
-                <Link href="/" className="name">
-                    Thomas Laforge
-                </Link>
-                <div className="functions">
-                    <div className="function">Developpeur web freelance</div>
-                    <div className="function">Prof de squash</div>
-                </div>
+        <header className={!openedHeader ? "closed-header": ""}>
+            <div className="hide-action" onClick={() => setOpenedHeader(!openedHeader)}>
+                {openedHeader ? <VscArrowLeft /> : <VscArrowRight />}
             </div>
-            <nav>
-                <ul className="menu">
-                    {menuItems.map((item, key) => (
-                        <li key={key} className={currentMenuItem === key ? 'menu-item_selected' : ''}>
-                            <Link href={item.link}>
-                                {item.title}    
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-            <div className="socials">
-                <div className="social-media-elt">
-                    <a 
-                        href='https://github.com/ThomasLaforge/' 
-                        target="_blank"
-                    >
-                        <ImGithub />
-                    </a>
+            {openedHeader && <>
+                <div className="profile">
+                    <Link href="/">
+                        <img 
+                            className='logo' 
+                            src={'/avatar.png'} 
+                            alt="logo emprunté..."
+                        />
+                    </Link>
+                    <Link href="/" className="name">
+                        Thomas Laforge
+                    </Link>
+                    <div className="functions">
+                        <div className="function">Developpeur web freelance</div>
+                        <div className="function">Enseignant Formateur en développement web full stack</div>
+                    </div>
                 </div>
-                <div className="social-media-elt">
-                    <a 
-                        href='https://www.linkedin.com/in/thomas-laforge-b5936374/' 
-                        target="_blank"
-                    >
-                        <GrLinkedin />
-                    </a>
+                <nav>
+                    <ul className="menu">
+                        {menuItems.map((item, key) => (
+                            <li key={key} className={currentMenuItem === key ? 'menu-item_selected' : ''}>
+                                <Link href={item.link}>
+                                    {item.title}    
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+                <div className="socials">
+                    <div className="social-media-elt">
+                        <a 
+                            href='https://github.com/ThomasLaforge/' 
+                            target="_blank"
+                        >
+                            <ImGithub />
+                        </a>
+                    </div>
+                    <div className="social-media-elt">
+                        <a 
+                            href='https://www.linkedin.com/in/thomas-laforge-b5936374/' 
+                            target="_blank"
+                        >
+                            <GrLinkedin />
+                        </a>
+                    </div>
+                    <div className="social-media-elt">
+                        <a href='mailto:thomas.laforge.38@gmail.com'>
+                            <SiGmail />
+                        </a>
+                    </div>
                 </div>
-                <div className="social-media-elt">
-                    <a href='mailto:thomas.laforge.38@gmail.com'>
-                        <SiGmail />
-                    </a>
-                </div>
-            </div>
+            </>}
         </header>
-        <div className="content">
+        <div className={"content" + (!openedHeader ? " big-content" : "")}>
             <div className="inner">
                 {children}
             </div>

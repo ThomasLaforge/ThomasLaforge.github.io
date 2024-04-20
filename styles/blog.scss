@@ -7,7 +7,8 @@
         .blog-title {
             font-size: 2.5rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 3rem;
+            text-align: center;
         }
         .blog-meta {
             display: flex;
@@ -41,6 +42,10 @@
                     border-radius: 0.1rem;
                     margin: auto 0.3rem;
                     font-size: 0.8rem
+                }
+                
+                .blog-tag-elt:nth-child(1) {
+                    margin: auto 0.3rem auto 0;
                 }
             }
         }
@@ -80,6 +85,8 @@
                 
                 .blog-title {
                     font-size: 1.3rem;
+                    text-align: left;
+                    margin-bottom: 0.5rem;
                 }
                 
                 .blog-description {
