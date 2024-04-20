@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import matter from "gray-matter";
 import Link from "next/link";
-import Image from "next/image";
 import { GetStaticProps } from "next";
 import {ImCalendar} from 'react-icons/im'
 import fs from "fs";
@@ -50,9 +49,9 @@ const Index = ({ data }: IndexProps) => {
             return <div className='blog-summary' key={i}>
               {/* <div className="blog-miniature">
                 {miniature 
-                  ? <Image 
+                  ? < 
                       src={miniature} 
-                      className='miniature-image'
+                      className='miniature-'
                       width='150px'
                       height='50px'
                   />
@@ -66,10 +65,6 @@ const Index = ({ data }: IndexProps) => {
                   {blog.title}
                 </Link>
                 <div className="blog-meta">
-                  <div className="blog-date">
-                    <ImCalendar className='date-icon'/> 
-                    <div className="date-value">{blog.date}</div>
-                  </div>
                   {blog.tags && 
                     <div className="blog-tags">
                       {blog.tags.map((t, k) => (
@@ -77,6 +72,10 @@ const Index = ({ data }: IndexProps) => {
                       ))}
                     </div>
                   }
+                  <div className="blog-date">
+                    <ImCalendar className='date-icon'/> 
+                    <div className="date-value">{blog.date}</div>
+                  </div>
                 </div>
                 <div className='blog-description'>{blog.description}</div>
               </div>
@@ -107,8 +106,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
       content: data,
       miniatures: blogSlugs.map( blogFileName => {
         const slug = blogFileName.replace('.md', '')
-        const path = `${process.cwd()}/public/blog_images/${slug}/_miniature.png`;
-        return fs.existsSync(path) ? `/blog_images/${slug}/_miniature.png` : null 
+        const path = `${process.cwd()}/public/blog_s/${slug}/_miniature.png`;
+        return fs.existsSync(path) ? `/blog_s/${slug}/_miniature.png` : null 
       })
     } } as IndexProps,
   };

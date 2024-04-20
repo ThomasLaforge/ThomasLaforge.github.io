@@ -57,10 +57,6 @@ const Blog = ({ content, data }: BlogProps) => {
         <div className='blog-summary'>
           <div className='blog-title'>{frontmatter.title}</div>
           <div className="blog-meta">
-            <div className="blog-date">
-              <ImCalendar className='date-icon'/> 
-              <div className="date-value">{frontmatter.date}</div>
-            </div>
             {frontmatter.tags && 
               <div className="blog-tags">
                 {frontmatter.tags.map((t, k) => (
@@ -68,6 +64,10 @@ const Blog = ({ content, data }: BlogProps) => {
                 ))}
               </div>
             }
+            <div className="blog-date">
+              <ImCalendar className='date-icon'/> 
+              <div className="date-value">{frontmatter.date}</div>
+            </div>
           </div>
         </div>
         

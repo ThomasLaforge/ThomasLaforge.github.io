@@ -35,7 +35,10 @@ whoami
 
 Sinon, c'est simplement le nom que vous apercevez avant le @ dans votre terminal WSL.  
 
-Exemple :   `votre-nom-dutilisateur@DESKTOP-XXXXXXX:~$`  
+Exemple :   
+```bash
+votre-nom-dutilisateur@DESKTOP-XXXXXXX:~$
+```
 Ici : `votre-nom-dutilisateur`
 
 #### 2. Trouver la distribution Linux utilisée
@@ -45,7 +48,8 @@ Et on va maintenant passer sur le terminal Windows `cmd`.
 
 Tapez `cmd` dans la barre de recherche Windows pour ouvrir un terminal Windows.
 
-Il va falloir noter le nom de votre distribution WSL. Pour cela, vous pouvez taper la commande suivante :
+Il va falloir noter le nom de votre distribution WSL.  
+Pour cela, vous pouvez taper la commande suivante :
 
 ```bash
 wsl --list --verbose

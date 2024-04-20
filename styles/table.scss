@@ -16,7 +16,7 @@ table {
 th {
     font-weight: bold;
     text-align: left;
-    background-color: $secondary;
+    background-color: lighten($primary, 12%);
     color: $white;
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
