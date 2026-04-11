@@ -1,6 +1,6 @@
 //@ts-nocheck
 import react from "react";
-import matter from "gray-matter";
+import matter, { language } from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { NextPageContext } from "next";
@@ -10,7 +10,17 @@ import DisqusComments from "../../components/DisqusComments";
 import gfm from 'remark-gfm'
 import emoji from 'emoji-dictionary'
 import Link from "next/link";
-import { nord } from "react-syntax-highlighter/dist/cjs/styles/prism";
+// import { nord, nightOwl } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import myNord from "../../styles/block-code-theme/nord";
+import myTokyo from "../../styles/block-code-theme/tokyoNightStorm";
+import { create } from "zustand";
+
+const themes = [myNord, myTokyo]
+
+const useThemeStore = create((set) => ({
+  themeIndex: 0,
+  changeTheme: () => set((state) => ({ themeIndex: (state.themeIndex + 1) % themes.length })),
+}))
 
 const emojiSupport = (text: any) => text.value.replace(/:\w+:/gi, (name: string) => emoji.getUnicode(name))
 
@@ -22,11 +32,27 @@ const BlogImage = (props: any) => { return <img {...props} style={{maxWidth: '10
 
 const CodeBlock = ({ node, inline, className, children, ...props }: any) => {
   const match = /language-(\w+)/.exec(className || '');
+  const language = match ? match[1] : 'txt';
+  const { themeIndex, changeTheme } = useThemeStore()
 
   return !inline && match ? (
-    <SyntaxHighlighter style={nord} PreTag="div" customStyle={{ fontSize: "14px"}} language={match[1]} {...props}>
-      {String(children).replace(/\n$/, '')}
-    </SyntaxHighlighter>
+    <div className="custom-code-highliter">
+      <button 
+        className="btn-custom-theme-switcher"
+        onClick={changeTheme}
+      >
+        Changer le thème
+      </button>
+      <SyntaxHighlighter 
+        style={themes[themeIndex]}
+        PreTag="div"
+        customStyle={{ fontSize: "14px"}}
+        language={language}
+        {...props}
+      >
+        {String(children).replace(/\n$/, '')}
+      </SyntaxHighlighter>
+    </div>
   ) : (
     <code className={className} {...props}>
       {children}

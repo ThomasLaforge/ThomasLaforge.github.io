@@ -6,6 +6,40 @@ description: Oubli du mot de passe WSL ? Avant de tout réinstaller, voici comme
 date: 17/04/2024
 ---
 
+```ts
+// @ts-check
+for (let i = 0; i < 3; i++) {
+  console.log('Hello, World!');
+}
+
+function sayHello() {
+  console.log('Hello, World!');
+}
+
+export default function MyComponent() {
+    const [state, setState] = useState(0);
+
+    useEffect(() => {
+        console.log('Hello, World!');
+    }, []);
+  
+    return <div>Hello, World!</div>;
+}
+```
+
+```bash
+ls -l
+```
+
+```php
+<?php
+echo 'Hello, World!';
+?>
+<p>
+    Hello, World!
+</p>
+```
+
 ## Contexte
 
 Certains de mes étudiants n'ont pas toujours les bonnes pratiques pour leurs mots de passe. Certains au contraire cherchent à sécuriser au maximum leurs machines. Dans tous les cas, il arrive que l'on oublie son mot de passe WSL. 
